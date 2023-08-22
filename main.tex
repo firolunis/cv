@@ -1,0 +1,172 @@
+\documentclass[a4paper]{MagicalCV}
+
+% Removing page numbers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+% Change the geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Defining your colors
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-darknight}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% start document
+\begin{document}
+
+% Last update time
+\lastupdated
+
+% Title name
+\namesection{}{Vladislav Retivykh}
+
+% Column one
+\begin{minipage}[t]{0.33\textwidth} 
+
+% About
+\cvsection{About} 
+
+DevOps engineer with a passion to
+
+automation and learn new technologies.
+
+More details in Linkedin profile.
+\sectionsep
+
+% Links
+\cvsection{Links}
+
+\telegram{\href{https://t.me/firolunis}{@firolunis}}
+
+\email{\href{mailto:v.a.retivykh@icloud.com}{v.a.retivykh@icloud.com}}
+
+\linkedin{\href{https://www.linkedin.com/in/vretivykh/}{vretivykh}}
+\sectionsep
+
+% Education
+\cvsection{Education} 
+
+\subsection{Tomsk State University of \\ Control Systems and \\ Radioelectronics}
+\descript{Specialist in Information Security of Automated (Banking) Systems}
+\cvevent{2014 -- 2019}{Tomsk, RU} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+CTF cybersecurity competitions: participating \textbullet{} developing services and challenges \textbullet{} led the organizing committee
+\sectionsep
+
+% Skills
+\cvsection{Skills}
+
+\subsection{Scripting}
+Bash \textbullet{} Python \textbullet{} Perl 
+\subsection{CI/CD}
+GitLab CI \textbullet{} Bamboo \textbullet{} Teamcity \textbullet{} XCode
+\subsection{Monitoring and alerting}
+Icinga2 \textbullet{} Prometheus \textbullet{} Grafana
+\subsection{API}
+Atlassian \textbullet{} Telegram \textbullet{} vSphere \textbullet{}
+GitLab \textbullet{} LDAP \textbullet{} RabbitMQ
+\subsection{Network tools}
+ssh/mosh \textbullet{} iptables/ufw \textbullet{} nmap \textbullet{}
+wireshark \textbullet{} nginx \textbullet{} apache2
+\subsection{VPN}
+Wireguard \textbullet{} OpenVPN
+\subsection{Virtualization}
+VirtualBox \textbullet{} Parallels \textbullet{} vSphere \textbullet{} KVM
+\subsection{Databases}
+SQL \textbullet{} NoSQL
+\subsection{Misc}
+Linux \textbullet{} Docker \textbullet{} ELK \textbullet{} GitLab \textbullet{}
+Bitbucket \textbullet{} Ansible \textbullet{} SonarQube \textbullet {}
+WordPress \textbullet{} \LaTeX
+\subsection{Currently studying}
+k8s \textbullet{} AWS \textbullet{} Terraform
+\subsection{Soft skills}
+Mentoring \textbullet{} Management \textbullet{} Open-minded
+\sectionsep
+
+% Languages
+\cvsection{Languages}
+
+Russian: Native \textbullet{} English: B1+
+\sectionsep
+
+% Column two
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+% Experience
+\cvsection{Experience}
+
+\runsubsection{Systems Engineer (DevOps)} \\
+\descript{EPAM Systems}
+\cvevent{Nov 2020 – Present}{Saint Petersburg, RU -> Tbilisi, GE} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+  \item \textbf{JIRA}: administration, issues and workflows management, automation via API,
+    development of additional functionality via Jython
+  \item \textbf{Bitbucket}: administration, automation via API, custom PR decorations
+  \item \textbf{Bamboo}: administration, CI/CD for iOS, build plans and deployment projects,
+    internal automation via API and Selenium, Merge train development, Slack integrations,
+    Bitbucket and JIRA integrations and automations
+  \item \textbf{Dynatrace}: monitoring and issues investigations
+  \item \textbf{Sonarqube}: administration and development of custom PR decorations for Bitbucket
+  \item \textbf{ELK}: administration, LDAP integration, Logstash groks
+  \item \textbf{Gatling}: performance testing
+  \item \textbf{Icinga2, Prometheus and Grafana}: administration and development of custom hosts checks,
+    ELK checks, cron schedule for Icinga2 checks, alerting in Slack
+  \item \textbf{Environments (RHEL-based OS, Tomcat, Solr, Nginx, Filebeat)}: support of production and
+    non-production environments
+  \item \textbf{WordPress}: support of standalone production environment and configuration of conteinerized
+    dev environment behind reverse-proxy
+  \item \textbf{Mentoring} DevOps newcomers
+\end{tightemize}
+\sectionsep
+
+\runsubsection{QA Automation Engineer} \\
+\descript{Positive Technologies}
+\cvevent{Dec 2016 – Nov 2020}{Tomsk, RU} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+In fact, I performed activities of DevOps engineer.
+\begin{tightemize}
+  \item Integration of CilckHouse database with the product (PoC)
+  \item Automation for access management and virtual environments data collection (Perl/Python, SSH, Confluence API)
+  \item Two-tier automated deployment (Ansible/Python, vSphere API, GitLab CI)
+  \item System for tag-based vSphere environment cleanup and user notifications (Python, vSphere API)
+  \item Migrating build configurations from Teamcity to GitLab CI, including advanced pipeline parametrization for GitLab CI
+\end{tightemize}
+\sectionsep
+
+% Volunteering
+\cvsection{Volunteering}
+
+\runsubsection{Teacher} \\
+\descript{Tomsk State University of Control Systems and Radioelectronics}
+\cvevent{Sep 2017 – Feb 2020}{Tomsk, RU} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+  \item Computer Science: lessons, labs and exams
+  \item Technologies and Methods of Programming: lessons, labs, curriculum development, exams, and instructional material creation
+  \item Development of Automated Information Systems: lectures, lessons, labs, full course development, exams, and training DevOps specialists for former company
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}
