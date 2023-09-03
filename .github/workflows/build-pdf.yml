@@ -14,8 +14,15 @@ jobs:
           extra_fonts: |
             ./fonts/lato/*.ttf
             ./fonts/raleway/*.otf
+      - name: Rename CV
+        run: mv main.pdf firolunis_cv.pdf
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: PDF
-          path: main.pdf
+          name: CV
+          path: firolunis_cv.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: firolunis_cv.pdf
