@@ -11,6 +11,9 @@ jobs:
         with:
           root_file: main.tex
           latexmk_use_lualatex: true
+          extra_fonts: |
+            ./fonts/lato/*.ttf
+            ./fonts/raleway/*.otf
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
